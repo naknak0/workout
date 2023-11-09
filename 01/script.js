@@ -1,10 +1,27 @@
 $(function () {
-  $("*").css("border", "1px solid #00f");
-});
-
-$(function () {
-  $("h1").css("background", "pink");
-  $("h2 p").css("background", "yellow");
-  $("p").next().css("color", "#fff");
-  $("h2").next().css("background", "#f00");
+  /*
+  $("li:first-of-type").css({
+    background: "#ff0",
+  });
+  $("li:last-of-type").css({
+    background: "#0ff",
+  });
+  */
+  /*
+  $("#menu1 li:nth-child(1)").css({
+    background: "#ff0",
+  });
+  $("#menu1 li:nth-child(2n)").css({
+    border: "2px dashed #f00",
+  });
+  $("#menu2 li:nth-last-child(2)").css({
+    background: "#0ff",
+  });
+  */
+  $("#menu1 li").slice(1, 3).css({
+    background: "#ff0",
+  });
+  $("li:only-child").css({
+    background: "#0ff",
+  });
 });
