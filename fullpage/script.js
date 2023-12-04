@@ -1,10 +1,10 @@
-const Body = document.querySelector('body');
-const Nav_btn = document.querySelector('#nav_icon');
-const sec2_Title = document.querySelector('#sec2 h1.title');
-const sec2_Slider = document.querySelector('#sec2 .slider_wrap');
+const Body = document.querySelector("body");
+const Nav_btn = document.querySelector("#nav_icon");
+const sec2_Title = document.querySelector("#sec2 h1.title");
+const sec2_Slider = document.querySelector("#sec2 .slider_wrap");
 
-Nav_btn.addEventListener('click', () => {
-  Body.classList.toggle('nav_active');
+Nav_btn.addEventListener("click", () => {
+  Body.classList.toggle("nav_active");
 });
 
 const sec2 = () => {
@@ -29,20 +29,20 @@ const sec2_reset = () => {
   `;
 };
 
-new fullpage('#fullpage', {
+new fullpage("#fullpage", {
   //options here
   autoScrolling: true,
   scrollHorizontally: true,
   navigation: true,
-  anchors: ['Num0', 'Num1', 'Num2', 'Num3', 'Num4'],
+  anchors: ["Num0", "Num1", "Num2", "Num3", "Num4"],
   afterLoad: (old_elem, new_elem, direction) => {
     if (new_elem.index === 2) {
       sec2();
-      console.log('section 2 Hello!');
+      console.log("section 2 Hello!");
     }
     if (old_elem.index === 2) {
       sec2_reset();
-      console.log('section 2 good bye!');
+      console.log("section 2 good bye!");
     }
   },
 });
