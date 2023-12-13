@@ -1,7 +1,14 @@
+const Body = document.querySelector("body");
+const Nav_btn = document.querySelector("#nav_icon");
+
+Nav_btn.addEventListener("click", () => {
+  Body.classList.toggle("nav_active");
+});
+
 $(document).ready(function () {
   $("#fullpage").fullpage({
     licenseKey: "OPEN-SOURCE-GPLV3-LICENSE", // 무료 사용시 해당 라이센스 카피할 것(반드시 있어야함)
-    navigation: true, //우측페이저유무
+    navigation: false, //우측페이저유무
     navigationPosition: "right", // left,right(default) 페이저 위치
     autoScrolling: true,
     scrollHorizontally: true,
